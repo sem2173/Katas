@@ -1,6 +1,8 @@
 Kata 
 ====
 
+Try something to store Kata and other experimentations on code... 
+
 Here is some kata I have try to do. 
 I build this repo with a branch per language. 
 I store only kata that I have done (or start) with a language. 
