@@ -12,5 +12,5 @@ For version, I try to tag before I start a new version Kata (tag with kata's nam
 Let see if I can do that...
 
 For now, there is 2 branch:
-- Haskell https://github.com/yaf/Katas/tree/Haskell
-- Ruby  https://github.com/yaf/Katas/tree/Ruby
+* Haskell https://github.com/yaf/Katas/tree/Haskell
+* Ruby  https://github.com/yaf/Katas/tree/Ruby
