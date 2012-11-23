@@ -12,7 +12,8 @@ For version, I try to tag before I start a new version Kata (tag with kata's nam
 Ok, I add directory with kata subject, a readme to explain it and try to add test for some languages
 Let see if I can do that...
 
-For now, there is 2 branch:
+For now, there is 3 branch:
 
-* Haskell https://github.com/yaf/Katas/tree/Haskell
-* Ruby  https://github.com/yaf/Katas/tree/Ruby
+* Haskell
+* Ruby
+* Go
