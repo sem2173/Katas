@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+  <head>
+    <title>String Parser</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="JSSpec.css" />
+    <script type="text/javascript" src="diff_match_patch.js"></script>
+    <script type="text/javascript" src="JSSpec.js"></script>
+    <script type="text/javascript" src="grille.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">// <![CDATA[
+      describe("Jeu de la vie", {
+            'une cellule isolé meurt': function(){
+            var grille =  new Grille([
+                [null, null, null], 
+                [null, 1, null], 
+                [null, null, null]
+              ]);
+            
+            var expected_grille =  new Grille([
+              [null, null, null], 
+              [null, null, null], 
+              [null, null, null]
+              ]);
+             value_of(grille.suivante()).should_be(expected_grille);
+             },
+             'une cellule avec 2 voisines survit':function(){
+            var grille =  new Grille([
+                [null, null, null, null, null, null], 
+                [null, 1   , 1   , 1   , null, null], 
+                [null, null, null, null, null, null], 
+              ]);
+ 
+            var expected_grille =  new Grille([
+                [null, null, null, null, null, null], 
+                [null, null, 1   , null, null, null], 
+                [null, null, null, null, null, null], 
+              ]);
+             value_of(grille.suivante()).should_be(expected_grille);
+
+             }
+          });
+// ]]></script>
+</body>
+</html>

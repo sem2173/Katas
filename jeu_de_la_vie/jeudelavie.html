@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="grille.js"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+        var t_cel = 30;
+        var vivante = "#fdfd00";
+        var vide = "#fdfdfd";
+        draw();
+        setInterval(draw, 2500);
+      function draw(){
+        var canvas = document.getElementById('grille');
+        if(canvas){
+          var grille = canvas.grille;
+          if(!grille){
+            grille = new Grille(new Array(
+              new Array(null, null, null),
+              new Array(null, 1, null),
+              new Array(null, null, null)
+              ));
+          }
+          var ctx = canvas.getContext('2d');
+          ctx.clearRect(0,0,100,100);
+
+          for(var i in grille.lignes){
+            for(var j in grille.lignes[i]){
+              ctx.fillStyle = vide;
+              if (grille.lignes[i][j] != null){
+                ctx.fillStyle = vivante;
+              }
+              ctx.fillRect(i*t_cel, j*t_cel, t_cel, t_cel);
+              ctx.strokeStyle = "#e1e1e1";
+              ctx.strokeRect(i*t_cel, j*t_cel, t_cel, t_cel);
+            }
+          }
+          grille = grille.suivante();
+          canvas.grille = grille;
+        }
+      }
+      }
+</script>
+  </head>
+  <body>
+    <canvas id="grille" width="100" height="100"></canvas>
+  </body>
+</html>
