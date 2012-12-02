@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+  <head>
+    <title>String Parser</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="JSSpec.css" />
+    <script type="text/javascript" src="diff_match_patch.js"></script>
+    <script type="text/javascript" src="JSSpec.js"></script>
+    <script type="text/javascript" src="tetris.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">// <![CDATA[
+      describe("Jeu", {
+          'on cré un jeu avec une taille': function(){
+            var jeu = new Jeu(10, 16);
+            value_of(jeu.x).should_be(10);
+            value_of(jeu.y).should_be(16);
+          },
+          'Un jeu démarre sans piece courante': function(){
+            var jeu = new Jeu(1, 2);
+            value_of(jeu.piece_courante).should_be(undefined);
+          },
+          'Dans un jeu, on a une piece courante': function(){
+            var jeu = new Jeu(10, 16)
+            var p = new Piece(0);
+            jeu.set_piece_courante(p);
+            value_of(jeu.piece_courante).should_be(p);
+          }
+          });
+      describe("Piece", {
+          'Une piece a une position y': function() {
+            var p = new Piece(3);
+            value_of(p.position_y()).should_be(3);
+            var p = new Piece(5);
+            value_of(p.position_y()).should_be(5);
+            },
+          'On peut modifier la position en y d une pièce':function(){
+            var p = new Piece(3);
+            value_of(p.position_y()).should_be(3);
+            p.set_position_y(4);
+            value_of(p.position_y()).should_be(4);
+          }
+          });
+// ]]></script>
+</body>
+</html>

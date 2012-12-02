@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <script type="text/javascript" src="tetris.js"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+        var jeu = new Jeu(200, 320);
+        setInterval(draw, 150);
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="tetris" width="200" height="320"></canvas>
+  </body>
+</html>
