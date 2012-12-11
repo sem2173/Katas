@@ -19,6 +19,7 @@ For now, there is 3 branch:
 * Go
 
 
-Les exercices sont issu de divers source dont:
+La plupart de ces exercices sont selectionné par moi à partir des sources suivantes:
+
 * Le coding dojo http://wiki.agile-france.org/cgi-bin/wiki.pl?DojoDeveloppement
 * un site sur le TDD qui vise à regrouper lui aussi une serie d'exercice https://sites.google.com/site/tddproblems/all-problems-1
