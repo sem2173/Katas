@@ -17,3 +17,8 @@ For now, there is 3 branch:
 * Haskell
 * Ruby
 * Go
+
+
+Les exercices sont issu de divers source dont:
+* Le coding dojo http://wiki.agile-france.org/cgi-bin/wiki.pl?DojoDeveloppement
+* un site sur le TDD qui vise à regrouper lui aussi une serie d'exercice https://sites.google.com/site/tddproblems/all-problems-1
